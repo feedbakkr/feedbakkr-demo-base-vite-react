@@ -1,0 +1,176 @@
+/*
+ * Compression Labs demo — shared design tokens.
+ *
+ * Slate + teal palette. Light mode by default, dark mode via
+ * prefers-color-scheme. Every repo in the demo family should use these
+ * tokens so the visual language stays identical across frameworks.
+ */
+
+:root {
+	/* palette — slate + teal */
+	--surface: #ffffff;
+	--surface-raised: #ffffff;
+	--surface-muted: #f8fafc; /* slate-50 */
+	--surface-code: #f1f5f9; /* slate-100 */
+
+	--text: #0f172a; /* slate-900 */
+	--text-muted: #475569; /* slate-600 */
+	--text-subtle: #64748b; /* slate-500 */
+
+	--border: #e2e8f0; /* slate-200 */
+	--border-strong: #cbd5e1; /* slate-300 */
+
+	--accent: #0d9488; /* teal-600 */
+	--accent-hover: #14b8a6; /* teal-500 */
+	--accent-soft: #ccfbf1; /* teal-100 */
+	--accent-contrast: #ffffff;
+
+	--danger: #dc2626;
+	--ok: #16a34a;
+
+	--font-sans:
+		ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji";
+	--font-mono:
+		ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+		monospace;
+
+	--max-w: 1100px;
+	--radius: 10px;
+	--radius-sm: 6px;
+	--shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.05);
+	--shadow-md:
+		0 4px 12px -2px rgba(15, 23, 42, 0.08), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+
+	color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--surface: #0a0f14;
+		--surface-raised: #111827;
+		--surface-muted: #0f172a;
+		--surface-code: #0f172a;
+
+		--text: #e2e8f0;
+		--text-muted: #94a3b8;
+		--text-subtle: #64748b;
+
+		--border: #1e293b;
+		--border-strong: #334155;
+
+		--accent: #2dd4bf;
+		--accent-hover: #5eead4;
+		--accent-soft: rgba(45, 212, 191, 0.12);
+		--accent-contrast: #0a0f14;
+	}
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: var(--font-sans);
+	font-size: 16px;
+	line-height: 1.6;
+	color: var(--text);
+	background: var(--surface);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-hover);
+	text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+	border-radius: var(--radius-sm);
+}
+
+button {
+	font-family: inherit;
+	cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--text);
+	line-height: 1.25;
+	margin: 0 0 0.5em;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+}
+
+h1 {
+	font-size: clamp(1.75rem, 3vw + 1rem, 2.5rem);
+}
+h2 {
+	font-size: clamp(1.25rem, 1.5vw + 1rem, 1.625rem);
+}
+h3 {
+	font-size: 1.125rem;
+}
+
+p {
+	margin: 0 0 1em;
+}
+
+code,
+pre {
+	font-family: var(--font-mono);
+	font-size: 0.9em;
+}
+
+code {
+	background: var(--surface-code);
+	border: 1px solid var(--border);
+	padding: 0.1em 0.35em;
+	border-radius: 4px;
+}
+
+pre {
+	background: var(--surface-code);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	padding: 0.875rem 1rem;
+	overflow-x: auto;
+	margin: 0 0 1em;
+}
+
+pre code {
+	background: transparent;
+	border: 0;
+	padding: 0;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid var(--border);
+	margin: 2rem 0;
+}
+
+::selection {
+	background: var(--accent-soft);
+	color: var(--text);
+}

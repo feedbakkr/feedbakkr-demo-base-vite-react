@@ -1,0 +1,109 @@
+.docPage {
+	display: grid;
+	gap: 2rem;
+}
+
+@media (min-width: 860px) {
+	.docPage {
+		grid-template-columns: minmax(0, 1fr) 220px;
+	}
+}
+
+.breadcrumb {
+	font-size: 0.8rem;
+	color: var(--text-subtle);
+	margin-bottom: 0.75rem;
+}
+
+.breadcrumb a {
+	color: inherit;
+}
+
+.docSection h2 {
+	margin-top: 2rem;
+}
+
+.docFeedback {
+	margin-top: 2.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--border);
+	color: var(--text-muted);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.docFeedbackActions {
+	display: flex;
+	gap: 0.5rem;
+}
+
+.sidebar {
+	position: sticky;
+	top: 5rem;
+	height: fit-content;
+	border-left: 1px solid var(--border);
+	padding-left: 1.25rem;
+	font-size: 0.875rem;
+	color: var(--text-muted);
+}
+
+.sidebar h4 {
+	font-size: 0.75rem;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--text-subtle);
+	margin: 0 0 0.5rem;
+}
+
+.sidebar ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 0.25rem;
+}
+
+.sidebar a {
+	color: var(--text-muted);
+}
+
+.docCardRow {
+	display: grid;
+	gap: 0.85rem;
+	grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+	.docCardRow {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+.issueList {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 0.75rem;
+}
+
+.issueList li {
+	background: var(--surface-raised);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-sm);
+	padding: 0.9rem 1rem;
+}
+
+.issueTitle {
+	font-weight: 600;
+	margin: 0 0 0.25rem;
+}
+
+.issueBody {
+	color: var(--text-muted);
+	font-size: 0.925rem;
+	margin: 0;
+}

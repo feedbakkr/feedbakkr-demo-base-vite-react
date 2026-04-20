@@ -1,0 +1,254 @@
+{
+	"product": {
+		"name": "Compression Labs",
+		"tagline": "Lossless feedback compression for modern product teams",
+		"taglinesAlt": [
+			"Turn product noise into structured signal",
+			"Capture feedback. Reduce chaos. Ship with clarity.",
+			"Structure what users say into what teams need"
+		],
+		"positioning": "Compression Labs helps teams capture, structure, and act on product feedback across applications, documentation, and support channels.",
+		"tone": "Professional, slightly technical, lightly tongue-in-cheek",
+		"phrases": [
+			"signal over noise",
+			"structured feedback",
+			"reduce duplication",
+			"capture context",
+			"actionable insight",
+			"minimal integration surface",
+			"feedback pipeline",
+			"high fidelity input"
+		]
+	},
+	"navigation": {
+		"primary": ["Home", "Features", "Docs", "Contact", "About"],
+		"footer": ["Docs", "Contact", "About"],
+		"footerNote": "Compression Labs. Built for teams that prefer signal over noise.",
+		"footerMicro": "Some feedback may have been optimised for clarity."
+	},
+	"home": {
+		"hero": {
+			"title": "Compression Labs",
+			"subtitle": "Lossless feedback compression for modern product teams",
+			"body": "Capture, structure, and reduce product feedback into actionable insight. Designed for teams that want clarity without adding process overhead.",
+			"primaryCTA": "View Documentation",
+			"secondaryCTA": "Contact Us"
+		},
+		"whatItDoes": {
+			"title": "Turn feedback into structured signal",
+			"body": "Product feedback is often fragmented, duplicated, and lacking context. Compression Labs provides a simple way to capture high fidelity input and transform it into something your team can actually use."
+		},
+		"features": [
+			{
+				"title": "Capture feedback anywhere",
+				"body": "Collect feedback from forms, documentation, and product surfaces without forcing users into rigid workflows."
+			},
+			{
+				"title": "Add context automatically",
+				"body": "Attach page, environment, and session context to every submission to reduce follow-up and guesswork."
+			},
+			{
+				"title": "Reduce duplication",
+				"body": "Group and structure similar feedback to avoid repeated analysis and wasted effort."
+			},
+			{
+				"title": "Developer-friendly integration",
+				"body": "Minimal setup with predictable patterns that fit naturally into modern applications."
+			}
+		],
+		"howItWorks": [
+			"Capture input from your application or documentation",
+			"Structure and enrich feedback with context",
+			"Route signals into your internal workflows"
+		],
+		"stats": [
+			"12,481 signals captured",
+			"94 percent reduction in duplicate reports (internally estimated)",
+			"Used by teams shipping continuously"
+		],
+		"cta": {
+			"title": "Start capturing better feedback",
+			"body": "Integrate once and begin collecting structured feedback across your entire product surface.",
+			"action": "View Documentation"
+		}
+	},
+	"featuresPage": {
+		"title": "Features",
+		"intro": "Compression Labs is designed to capture high fidelity feedback and turn it into structured, actionable insight with minimal effort.",
+		"items": [
+			{
+				"title": "Feedback capture",
+				"body": "Collect feedback from contact forms, documentation pages, and embedded product surfaces using simple, flexible inputs."
+			},
+			{
+				"title": "Context enrichment",
+				"body": "Automatically include page location, environment, and metadata so every submission arrives with useful context."
+			},
+			{
+				"title": "Signal structuring",
+				"body": "Transform unstructured input into consistent formats that can be triaged and analysed efficiently."
+			},
+			{
+				"title": "Lightweight triage",
+				"body": "Organise incoming feedback into manageable streams without introducing heavy workflow tools."
+			},
+			{
+				"title": "Multi-channel input",
+				"body": "Capture feedback from multiple sources while maintaining a single structured pipeline."
+			},
+			{
+				"title": "Minimal integration surface",
+				"body": "Integrate quickly using predictable patterns that align with modern frontend frameworks."
+			}
+		],
+		"cta": {
+			"title": "See how it fits into your stack",
+			"action": "View Documentation"
+		}
+	},
+	"contact": {
+		"title": "Contact",
+		"intro": "Have a question, need support, or want to explore integration options? Send us a message and we will respond as soon as possible.",
+		"form": {
+			"fields": {
+				"name": "Your name",
+				"email": "you@company.com",
+				"topic": [
+					"General enquiry",
+					"Support request",
+					"Bug report",
+					"Feature idea",
+					"Partnership"
+				],
+				"message": "Provide as much detail as possible. Include context where relevant."
+			}
+		},
+		"notes": {
+			"response": "Most enquiries receive a response within one business day.",
+			"tip": "For technical issues, including steps to reproduce and expected behaviour will help us respond faster."
+		}
+	},
+	"docs": {
+		"index": {
+			"title": "Documentation",
+			"intro": "This documentation outlines how to integrate Compression Labs into your application and begin capturing structured feedback signals.",
+			"pages": [
+				{
+					"title": "Getting Started",
+					"description": "Learn the basics of integrating feedback capture into your application."
+				},
+				{
+					"title": "SDK Setup",
+					"description": "Configure the integration layer and customise behaviour."
+				},
+				{
+					"title": "Troubleshooting",
+					"description": "Resolve common issues and edge cases."
+				}
+			],
+			"note": "All examples are framework-agnostic and designed to minimise integration complexity."
+		},
+		"gettingStarted": {
+			"title": "Getting Started",
+			"intro": "This guide walks through the minimal steps required to begin capturing structured feedback within your application.",
+			"sections": [
+				{
+					"title": "Overview",
+					"body": "Compression Labs provides a lightweight integration model that allows you to capture user input and enrich it with contextual data."
+				},
+				{
+					"title": "Install",
+					"body": "Add the client integration to your application using your preferred package manager.",
+					"code": "npm install compression-labs"
+				},
+				{
+					"title": "Initialise",
+					"body": "Initialise the client with your project configuration.",
+					"code": "createClient({ projectKey: 'your-project-key' })"
+				},
+				{
+					"title": "Capture feedback",
+					"body": "Trigger feedback capture from your UI components or forms.",
+					"code": "submitFeedback({ message: 'User reported issue', category: 'bug' })"
+				}
+			],
+			"callout": "Keep payloads simple. Context will be enriched automatically where possible.",
+			"feedback": "Was this page helpful?"
+		},
+		"sdkSetup": {
+			"title": "SDK Setup",
+			"intro": "Configure the integration layer to control how feedback is captured, structured, and transmitted.",
+			"sections": [
+				{
+					"title": "Configuration",
+					"body": "Define your project settings and any required metadata.",
+					"code": "createClient({ projectKey: 'your-project-key', environment: 'production' })"
+				},
+				{
+					"title": "Custom fields",
+					"body": "Extend payloads with additional structured fields relevant to your application.",
+					"code": "submitFeedback({ message: 'Feature request', category: 'feature', priority: 'medium' })"
+				},
+				{
+					"title": "UI integration",
+					"body": "Embed feedback triggers within your application interface."
+				}
+			],
+			"callout": "Avoid over-collecting data. Focus on capturing high signal input.",
+			"feedback": "Was this section clear?"
+		},
+		"troubleshooting": {
+			"title": "Troubleshooting",
+			"intro": "This section covers common issues and recommended resolutions when integrating Compression Labs.",
+			"issues": [
+				{
+					"title": "Feedback not submitting",
+					"resolution": "Verify client initialisation and required payload fields."
+				},
+				{
+					"title": "Missing context data",
+					"resolution": "Ensure integration is initialised correctly and context capture is enabled."
+				},
+				{
+					"title": "Duplicate submissions",
+					"resolution": "Check that events are not being triggered multiple times."
+				}
+			],
+			"cta": "Still having issues? Contact support with full context.",
+			"feedback": "Was this helpful?"
+		}
+	},
+	"about": {
+		"title": "About Compression Labs",
+		"intro": "Compression Labs was created to address a common problem in modern product teams: feedback is everywhere, but insight is not.",
+		"sections": [
+			{
+				"title": "The problem",
+				"body": "Teams receive input from multiple channels including support, documentation, and in-product interactions. This feedback is often duplicated, incomplete, or missing context."
+			},
+			{
+				"title": "The approach",
+				"body": "Compression Labs focuses on capturing high fidelity input and structuring it into consistent, actionable signals without adding unnecessary process."
+			},
+			{
+				"title": "Who it is for",
+				"body": "Designed for product teams, developers, and organisations that value clarity, efficiency, and evidence-based decision making."
+			}
+		],
+		"closing": "Clear direction starts with structured feedback."
+	},
+	"error404": {
+		"title": "Page not found",
+		"body": "This page may have been optimised out of existence.",
+		"cta": "Return to Home"
+	},
+	"microcopy": {
+		"buttons": ["Submit", "Send message", "View docs", "Learn more", "Get started"],
+		"validation": {
+			"required": "This field is required",
+			"email": "Please enter a valid email address"
+		},
+		"success": "Feedback submitted successfully",
+		"error": "Something went wrong. Please try again."
+	}
+}
