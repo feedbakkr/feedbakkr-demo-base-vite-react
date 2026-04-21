@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink, Outlet, Link } from "react-router-dom";
 import { site } from "../content";
+import DemoModal, { DEMO_MODAL_ACK_KEY } from "./DemoModal";
 import styles from "./Layout.module.css";
 
 const NAV_ITEMS: { label: string; to: string }[] = [
@@ -11,11 +12,50 @@ const NAV_ITEMS: { label: string; to: string }[] = [
 	{ label: "About", to: "/about" },
 ];
 
+const FEEDBAKKR_SITE_URL = "https://feedbakkr.com";
+
 export default function Layout() {
 	const [mobileOpen, setMobileOpen] = useState(false);
+	const [modalOpen, setModalOpen] = useState(() => {
+		try {
+			return localStorage.getItem(DEMO_MODAL_ACK_KEY) !== "1";
+		} catch {
+			return true;
+		}
+	});
 
 	return (
 		<div className={styles.shell}>
+			<div className={styles.topStack}>
+			<div className={styles.infoBar} role="region" aria-label="Demo information">
+				<div className={styles.infoBarInner}>
+					<span className={styles.infoBarLabel}>
+						<span className={styles.infoBarDot} aria-hidden="true" />
+						Feedbakkr demo app
+					</span>
+					<div className={styles.infoBarActions}>
+						<a
+							className={styles.infoBarLink}
+							href={FEEDBAKKR_SITE_URL}
+							target="_blank"
+							rel="noreferrer noopener"
+						>
+							Visit feedbakkr.com
+						</a>
+						<span className={styles.infoBarDivider} aria-hidden="true">
+							·
+						</span>
+						<button
+							type="button"
+							className={styles.infoBarButton}
+							onClick={() => setModalOpen(true)}
+						>
+							About this demo
+						</button>
+					</div>
+				</div>
+			</div>
+
 			<header className={styles.header}>
 				<div className={styles.headerInner}>
 					<Link to="/" className={styles.brand} onClick={() => setMobileOpen(false)}>
@@ -67,6 +107,7 @@ export default function Layout() {
 					</div>
 				)}
 			</header>
+			</div>
 
 			<main className={styles.main}>
 				<Outlet />
@@ -85,6 +126,8 @@ export default function Layout() {
 					</div>
 				</div>
 			</footer>
+
+			<DemoModal open={modalOpen} onClose={() => setModalOpen(false)} />
 		</div>
 	);
 }

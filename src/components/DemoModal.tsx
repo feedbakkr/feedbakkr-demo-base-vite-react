@@ -1,30 +1,24 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./DemoModal.module.css";
 
 /**
- * First-run modal for the demo family. Show once per browser, store the
- * acknowledgement in local storage so repeat visits skip it. The key and copy
- * are shared across every feedbakkr-demo-base-* repo.
+ * Demo-project modal. Controlled from the outside so the top bar can re-open
+ * it after the first-run dismissal. Writing the ack is still the modal's
+ * concern — the first dismissal persists so subsequent visits don't auto-open.
+ * Shared local-storage key across every feedbakkr-demo-base-* repo.
  */
-const ACK_KEY = "feedbakkr-demo-ack";
+export const DEMO_MODAL_ACK_KEY = "feedbakkr-demo-ack";
 
-export default function DemoModal() {
-	const [open, setOpen] = useState(false);
-	const dialogRef = useRef<HTMLDivElement | null>(null);
+type DemoModalProps = {
+	open: boolean;
+	onClose: () => void;
+};
+
+export default function DemoModal({ open, onClose }: DemoModalProps) {
 	const buttonRef = useRef<HTMLButtonElement | null>(null);
 
 	useEffect(() => {
-		try {
-			if (localStorage.getItem(ACK_KEY) !== "1") setOpen(true);
-		} catch {
-			// SSR / storage disabled — show once per session.
-			setOpen(true);
-		}
-	}, []);
-
-	useEffect(() => {
 		if (!open) return;
-		// Focus the confirm button for keyboard users.
 		buttonRef.current?.focus();
 		function onKey(e: KeyboardEvent) {
 			if (e.key === "Escape") dismiss();
@@ -36,11 +30,11 @@ export default function DemoModal() {
 
 	function dismiss() {
 		try {
-			localStorage.setItem(ACK_KEY, "1");
+			localStorage.setItem(DEMO_MODAL_ACK_KEY, "1");
 		} catch {
 			// ignore — best effort
 		}
-		setOpen(false);
+		onClose();
 	}
 
 	if (!open) return null;
@@ -53,7 +47,6 @@ export default function DemoModal() {
 			}}
 		>
 			<div
-				ref={dialogRef}
 				role="dialog"
 				aria-modal="true"
 				aria-labelledby="demo-modal-title"
@@ -62,15 +55,16 @@ export default function DemoModal() {
 			>
 				<span className={styles.eyebrow}>Demo project</span>
 				<h2 id="demo-modal-title" className={styles.title}>
-					Welcome — this is a demo
+					About this demo
 				</h2>
 				<p id="demo-modal-body" className={styles.body}>
-					This is a base demo created to support the Feedbakkr integration guides. It's
+					This is a demo application created to support the Feedbakkr integration guides. It's
 					intentionally small and simple so the walkthrough steps stay easy to follow.
 				</p>
 				<p className={styles.body}>
-					It isn't meant to be production-ready — explore the structure alongside the docs, and
-					treat it as a starting point rather than a template.
+					It is <strong>not</strong> a production-ready solution — there's no backend, no
+					authentication, and no real data. Treat the structure as a starting point to explore
+					alongside the Feedbakkr documentation.
 				</p>
 				<div className={styles.actions}>
 					<button ref={buttonRef} type="button" className={styles.button} onClick={dismiss}>

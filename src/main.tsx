@@ -3,7 +3,6 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Layout from "./components/Layout";
-import DemoModal from "./components/DemoModal";
 import Home from "./pages/Home";
 import Features from "./pages/Features";
 import DocsIndex from "./pages/DocsIndex";
@@ -20,7 +19,6 @@ if (!rootEl) throw new Error("Root element not found");
 createRoot(rootEl).render(
 	<StrictMode>
 		<BrowserRouter>
-			<DemoModal />
 			<Routes>
 				<Route element={<Layout />}>
 					<Route index element={<Home />} />

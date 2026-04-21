@@ -1,13 +1,13 @@
 {
 	"product": {
-		"name": "Compression Labs",
+		"name": "Shrinky-Dink Compression",
 		"tagline": "Lossless feedback compression for modern product teams",
 		"taglinesAlt": [
 			"Turn product noise into structured signal",
 			"Capture feedback. Reduce chaos. Ship with clarity.",
 			"Structure what users say into what teams need"
 		],
-		"positioning": "Compression Labs helps teams capture, structure, and act on product feedback across applications, documentation, and support channels.",
+		"positioning": "Shrinky-Dink Compression helps teams capture, structure, and act on product feedback across applications, documentation, and support channels.",
 		"tone": "Professional, slightly technical, lightly tongue-in-cheek",
 		"phrases": [
 			"signal over noise",
@@ -23,12 +23,12 @@
 	"navigation": {
 		"primary": ["Home", "Features", "Docs", "Contact", "About"],
 		"footer": ["Docs", "Contact", "About"],
-		"footerNote": "Compression Labs. Built for teams that prefer signal over noise.",
+		"footerNote": "Shrinky-Dink Compression. Built for teams that prefer signal over noise.",
 		"footerMicro": "Some feedback may have been optimised for clarity."
 	},
 	"home": {
 		"hero": {
-			"title": "Compression Labs",
+			"title": "Shrinky-Dink Compression",
 			"subtitle": "Lossless feedback compression for modern product teams",
 			"body": "Capture, structure, and reduce product feedback into actionable insight. Designed for teams that want clarity without adding process overhead.",
 			"primaryCTA": "View Documentation",
@@ -36,7 +36,7 @@
 		},
 		"whatItDoes": {
 			"title": "Turn feedback into structured signal",
-			"body": "Product feedback is often fragmented, duplicated, and lacking context. Compression Labs provides a simple way to capture high fidelity input and transform it into something your team can actually use."
+			"body": "Product feedback is often fragmented, duplicated, and lacking context. Shrinky-Dink Compression provides a simple way to capture high fidelity input and transform it into something your team can actually use."
 		},
 		"features": [
 			{
@@ -74,7 +74,7 @@
 	},
 	"featuresPage": {
 		"title": "Features",
-		"intro": "Compression Labs is designed to capture high fidelity feedback and turn it into structured, actionable insight with minimal effort.",
+		"intro": "Shrinky-Dink Compression is designed to capture high fidelity feedback and turn it into structured, actionable insight with minimal effort.",
 		"items": [
 			{
 				"title": "Feedback capture",
@@ -131,7 +131,7 @@
 	"docs": {
 		"index": {
 			"title": "Documentation",
-			"intro": "This documentation outlines how to integrate Compression Labs into your application and begin capturing structured feedback signals.",
+			"intro": "This documentation outlines how to integrate Shrinky-Dink Compression into your application and begin capturing structured feedback signals.",
 			"pages": [
 				{
 					"title": "Getting Started",
@@ -154,7 +154,7 @@
 			"sections": [
 				{
 					"title": "Overview",
-					"body": "Compression Labs provides a lightweight integration model that allows you to capture user input and enrich it with contextual data."
+					"body": "Shrinky-Dink Compression provides a lightweight integration model that allows you to capture user input and enrich it with contextual data."
 				},
 				{
 					"title": "Install",
@@ -199,7 +199,7 @@
 		},
 		"troubleshooting": {
 			"title": "Troubleshooting",
-			"intro": "This section covers common issues and recommended resolutions when integrating Compression Labs.",
+			"intro": "This section covers common issues and recommended resolutions when integrating Shrinky-Dink Compression.",
 			"issues": [
 				{
 					"title": "Feedback not submitting",
@@ -219,8 +219,8 @@
 		}
 	},
 	"about": {
-		"title": "About Compression Labs",
-		"intro": "Compression Labs was created to address a common problem in modern product teams: feedback is everywhere, but insight is not.",
+		"title": "About Shrinky-Dink Compression",
+		"intro": "Shrinky-Dink Compression was created to address a common problem in modern product teams: feedback is everywhere, but insight is not.",
 		"sections": [
 			{
 				"title": "The problem",
@@ -228,7 +228,7 @@
 			},
 			{
 				"title": "The approach",
-				"body": "Compression Labs focuses on capturing high fidelity input and structuring it into consistent, actionable signals without adding unnecessary process."
+				"body": "Shrinky-Dink Compression focuses on capturing high fidelity input and structuring it into consistent, actionable signals without adding unnecessary process."
 			},
 			{
 				"title": "Who it is for",
