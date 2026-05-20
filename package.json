@@ -3,11 +3,20 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.4",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "security:audit": "pnpm audit --audit-level high",
+    "security:audit:moderate": "pnpm audit --audit-level moderate",
+    "security:osv": "osv-scanner --recursive .",
+    "security:scan": "pnpm run security:audit && pnpm run security:osv",
+    "security:scan:full": "pnpm run security:audit:moderate && pnpm run security:osv"
   },
   "dependencies": {
     "react": "^19.2.5",
